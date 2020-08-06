@@ -9,3 +9,10 @@ const router = require('./router');
 const PORT = process.env.PORT || 5000;
 app.use(router);
 server.listen(PORT, () => console.log(`Servidor inciado en el puerto ${PORT}`));
+
+io.on('connection', (socket) => {
+  console.log('Conexión socket');
+  socket.on('disconnect', () => {
+    console.log('User had left!!!');
+  })
+});
