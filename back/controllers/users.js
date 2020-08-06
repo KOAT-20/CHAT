@@ -3,7 +3,7 @@ const user = [];
 const addUser = ({id, name, room}) => {
   name = name.trim().toLocaleLowerCase();
   room = room.trim().toLocaleLowerCase();
-  const existingUser = users.find((user) => user.room === room && user.name === name);
+  const existingUser = user.find((user) => user.room === room && user.name === name);
   if (existingUser) {
     return { error: 'Usuario existente'};
   }

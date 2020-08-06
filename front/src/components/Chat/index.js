@@ -23,6 +23,10 @@ export default function Chat ({location}) {
     }
   }, [ENDPOINT, location.search]);
 
+  useEffect(() => {
+
+  })
+
   return (
     <div>Chat</div>
   );
