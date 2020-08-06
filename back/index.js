@@ -12,7 +12,10 @@ server.listen(PORT, () => console.log(`Servidor inciado en el puerto ${PORT}`));
 
 io.on('connection', (socket) => {
   console.log('Conexión socket');
+  socket.on('join', ({ name, room }, callback) => {
+    console.log(name, room);
+  });
   socket.on('disconnect', () => {
-    console.log('User had left!!!');
+    console.log('Desconexión socket');
   })
 });
