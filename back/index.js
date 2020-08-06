@@ -6,7 +6,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 const router = require('./router');
 
-const { addUser, deleteUser, getUser, getUsersRoom } = require('./aux/users.js');
+const { addUser, deleteUser, getUser, getUsersRoom } = require('./controllers/users.js');
 
 const PORT = process.env.PORT || 5000;
 app.use(router);
