@@ -1,13 +1,13 @@
-const user = [];
+const users = [];
 
 const addUser = ({id, name, room}) => {
   name = name.trim().toLocaleLowerCase();
   room = room.trim().toLocaleLowerCase();
-  const existingUser = user.find((user) => user.room === room && user.name === name);
+  const existingUser = users.find((user) => user.room === room && user.name === name);
   if (existingUser) {
     return { error: 'Usuario existente'};
   }
-  const user = {id, anme, room};
+  const user = {id, name, room};
   users.push(user);
   return { user };
 }

@@ -17,7 +17,7 @@ io.on('connection', (socket) => {
     const { error, user } = addUser({id: socket.id, name, room});
     if (error) return callback(error);
     socket.emit('message', {user: 'admin', text: `${user.name} Bienvenido a la sala ${user.room}`});
-    socket.brodcast.to(user.room).emit('message', {user: 'admin', text:`${user.name}, se ha unido!`})
+    socket.broadcast.to(user.room).emit('message', {user: 'admin', text:`${user.name}, se ha unido!`})
     socket.join(user.room);
     callback();
   });
@@ -29,6 +29,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('Desconexión socket');
+    const user = deleteUser(socket.id);
+    if (user) {
+      io.to(user.room).emit('message', {user: 'admin', text: `${user.name} se ha desconectado.`})
+    }
   })
 });
