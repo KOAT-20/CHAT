@@ -1,34 +1,31 @@
 import React from 'react';
 import onlineIcon from '../../icons/onLine.png';
-// import './TextContainer.css';
+import {
+  TextContainerD, ActiveContainer, ActiveItem, ImgOnline
+} from './text.js'
 
 export default function TextContainer ({ users }) {
   return (
-    <div className="textContainer">
-      {/* <div>
-        <h1>Realtime Chat Application <span role="img" aria-label="emoji">💬</span></h1>
-        <h2>Created with React, Express, Node and Socket.IO <span role="img" aria-label="emoji">❤️</span></h2>
-        <h2>Try it out right now! <span role="img" aria-label="emoji">⬅️</span></h2>
-      </div> */}
+    <TextContainerD>
       {
         users
           ? (
             <div>
               <h1>People currently chatting:</h1>
-              <div className="activeContainer">
+              <ActiveContainer>
                 <h2>
                   {users.map(({name}) => (
-                    <div key={name} className="activeItem">
+                    <ActiveItem key={name}>
                       {name}
-                      <img alt="Online Icon" src={onlineIcon}/>
-                    </div>
+                      <ImgOnline alt="Online Icon" src={onlineIcon}/>
+                    </ActiveItem>
                   ))}
                 </h2>
-              </div>
+              </ActiveContainer>
             </div>
           )
           : null
       }
-    </div>
+    </TextContainerD>
   );
 }

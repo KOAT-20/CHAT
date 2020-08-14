@@ -18,8 +18,8 @@ export const SentTexPr10 = styled.p`
 
 export const MessageBoxBlue = styled.div`
   background: #F3F3F3;
-  border-radius: 20px;
-  padding: 5px 20px;
+  border-radius: 50px;
+  padding: 0px 10px;
   color: white;
   display: inline-block;
   max-width: 80%;

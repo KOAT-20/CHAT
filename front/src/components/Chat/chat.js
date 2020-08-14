@@ -10,7 +10,6 @@ export const Col = styled.div`
 `;
 
 export const ContainerChatOuter = styled.div`
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -22,7 +21,5 @@ export const ContainerChatInner = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background: #FFFFFF;
-  border-radius: 8px;
-  height: 60%;
-  width: 35%;
+  height: 100%;
 `;

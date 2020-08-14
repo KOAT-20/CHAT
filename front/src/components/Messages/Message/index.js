@@ -26,9 +26,9 @@ export default function Message ({ message: { text, user }, name })  {
         : (
           <MessageContainerStard>
             <MessageBoxLight>
-              <MessageTextDark className="messageText colorDark">{ReactEmoji.emojify(text)}</MessageTextDark>
+              <MessageTextDark>{ReactEmoji.emojify(text)}</MessageTextDark>
             </MessageBoxLight>
-            <SentTextPl10 className="sentText pl-10 ">{user}</SentTextPl10>
+            <SentTextPl10>{user}</SentTextPl10>
           </MessageContainerStard>
         )
   );

@@ -7,7 +7,9 @@ import InputMessage from '../Input';
 import Messages from '../Messages';
 import TextContainer from '../TextContainer';
 /* Style */
-import { Row, Col } from './chat.js';
+import {
+  Row, Col, ContainerChatOuter, ContainerChatInner
+} from './chat.js';
 
 let socket;
 
@@ -57,14 +59,14 @@ export default function Chat ({location}) {
         listado
       </Col>
       <Col size={8}>
-        <div className='ContainerChatOuter'>
-          <div className='ContainerChatInner'>
+        <ContainerChatOuter>
+          <ContainerChatInner>
             <BarApp room={room} />
             <Messages messages={messages} name={name} />
             <InputMessage message={message} setMessage={setMessage} sendMessage={sendMessage} />
-          </div>
-          <TextContainer users={users}/>
-        </div>
+            {/* <TextContainer users={users}/> */}
+          </ContainerChatInner>
+        </ContainerChatOuter>
       </Col>
     </Row>
   );
