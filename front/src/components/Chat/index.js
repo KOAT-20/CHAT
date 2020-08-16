@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 /* Component */
+import Tabs from '../Tabs';
 import BarApp from '../BarApp';
 import InputMessage from '../Input';
 import Messages from '../Messages';
@@ -56,7 +57,7 @@ export default function Chat ({location}) {
   return (
     <Row>
       <Col size={4}>
-        listado
+        <Tabs />
       </Col>
       <Col size={8}>
         <ContainerChatOuter>
