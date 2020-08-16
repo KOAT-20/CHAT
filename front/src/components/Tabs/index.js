@@ -8,25 +8,19 @@ export default function Tabs () {
       selectedTabPanelClassName='is-selected'
     >
       <STabList>
-        <STab size={4}>
+        <STab size={6}>
           <h5 style={{marginTop:'10%'}}>
-            Tab 1
+            <i class="far fa-comment"></i>
           </h5>
         </STab>
-        <STab size={4}>
+        <STab size={6}>
           <h5 style={{marginTop:'10%'}}>
-            Tab 2
-          </h5>
-        </STab>
-        <STab size={4}>
-          <h5 style={{marginTop:'10%'}}>
-            Tab 3
+            <i class="far fa-user"></i>
           </h5>
         </STab>
       </STabList>
       <STabPanel>Panel 1</STabPanel>
       <STabPanel>Panel 2</STabPanel>
-      <STabPanel>Panel 3</STabPanel>
     </STabs>
   );
 }
