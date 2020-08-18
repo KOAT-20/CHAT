@@ -1,0 +1,20 @@
+
+{
+  "users": [
+    {
+      "img": "https://es.wikipedia.org/wiki/Archivo:User_Circle.png",
+      "name": "Pedro",
+      "lastname": "Castillo",
+    },
+    {
+      "img": "https://es.wikipedia.org/wiki/Archivo:User_Circle.png",
+      "name": "Mark",
+      "lastname": "Smith",
+    },
+    {
+      "img": "https://es.wikipedia.org/wiki/Archivo:User_Circle.png",
+      "name": "mark",
+      "lastname": "lorem impsum",
+    }
+  ]
+}

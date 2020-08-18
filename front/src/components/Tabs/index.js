@@ -1,5 +1,7 @@
 import React from 'react';
 import { STabs, STab, STabList,  STabPanel } from './tabs.js';
+import Search from '../Search';
+import { Chats, Persons } from '../List';
 
 export default function Tabs () {
   return (
@@ -10,17 +12,22 @@ export default function Tabs () {
       <STabList>
         <STab size={6}>
           <h5 style={{marginTop:'10%'}}>
-            <i class="far fa-comment"></i>
+            <i className="far fa-comment"></i>
           </h5>
         </STab>
         <STab size={6}>
           <h5 style={{marginTop:'10%'}}>
-            <i class="far fa-user"></i>
+            <i className="far fa-user"></i>
           </h5>
         </STab>
       </STabList>
-      <STabPanel>Panel 1</STabPanel>
-      <STabPanel>Panel 2</STabPanel>
+      <STabPanel>
+        <Search />
+        <Chats />
+      </STabPanel>
+      <STabPanel>
+        <Persons />
+      </STabPanel>
     </STabs>
   );
 }
